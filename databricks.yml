@@ -8,6 +8,11 @@ include:
   - resources/*.yml
   - resources/*/*.yml
 
+sync:
+  include:
+    - src/**/*
+    - src/**/.*
+
 artifacts:
   python_artifact:
     type: whl
@@ -45,3 +50,4 @@ targets:
     permissions:
       - user_name: quangthanhdong04.au@gmail.com
         level: CAN_MANAGE
+        

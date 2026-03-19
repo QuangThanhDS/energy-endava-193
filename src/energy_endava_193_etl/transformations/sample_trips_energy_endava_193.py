@@ -7,6 +7,4 @@ from pyspark.sql.functions import col
 # using "+ Add" in the file browser.
 
 
-@dp.table
-def sample_trips_energy_endava_193():
-    return spark.read.table("samples.nyctaxi.trips")
+
