@@ -24,6 +24,24 @@ variables:
     description: The catalog to use
   schema:
     description: The schema to use
+  target_catalog:
+    default: "energy_endava_193"
+    description: The target catalog for ingestion job, created 263
+  target_schema:
+    default: "default"
+    description: The target schema for ingestion job, created 263
+
+resources:
+  jobs:
+    ingest_bronze_job:
+      name: ingest_bronze_job
+      tasks:
+        - task_key: ingest_bronze_task
+          notebook_task:
+            notebook_path: ./src/energy_endava_193_etl/transformations/01_ingest_bronze
+            base_parameters:
+              catalog: "${var.target_catalog}"
+              schema: "${var.target_schema}"
 
 targets:
   dev:
@@ -36,8 +54,8 @@ targets:
     workspace:
       host: https://dbc-35a677b6-29c1.cloud.databricks.com
     variables:
-      catalog: workspace
-      schema: ${workspace.current_user.short_name}
+      catalog: energy-endava-193
+      schema: default
   prod:
     mode: production
     workspace:
