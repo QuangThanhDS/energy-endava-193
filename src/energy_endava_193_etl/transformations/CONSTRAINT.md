@@ -19,8 +19,24 @@ Technical Constraints Summary:
 |Hydrogen Fuel Cells|Hydrogen|10%|Cold: 5/Warm: 0.5|
 |BESS (1-8 hours)|Electricity|N/A (Linear)|< 1 second|
 
+Reference tables on all the technology descriptors (this table does not have 100% reliable data so take it as a grain of salt):
 
-
+| Technology Descriptor | Fuel Source Descriptor | Min Stable Generation (%) | Start-up Time (Minutes) | Min Up-time (MUT) | Min Down-time (MDT) | Ramp Rate Proxy (% of Max/Min)
+|-|-|-|-|-|-|-|
+|BATTERY|GRID|0%|<1 sec|0|0|100% (Instant)|
+|BATTERY AND INVERTER|GRID|0%|<1 sec|0|0|100% (Instant)|
+|COMBINED CYCLE GAS TURBINE (CCGT)|NATURAL GAS (FOSSIL)|46%|145 (Cold)|4 hours|4 hours|3 - 5%|
+|COMPRESSION RECIPROCATING ENGINE|DIESEL/ NATURAL GAS(FOSSIL)|40%|10|15 mins|15 mins|20%-40%|
+|HYDRO GRAVITY|WATER|5%|5|0|0|20%-50%|
+|OPEN CYCLE GAS TURBINES (OCGT)|NATURAL GAS/COAL SEAM METHANE/DIESEL/KEROSENE (FOSSIL)|50%|30|30 MINS|30 MINS|10%-20%|
+|PHOTOVOLTAIC FLAT PANEL|SOLAR|0%|0|0|0|WEATHER DEPENDENT|
+|PHOTOVOLTAIC TRACKING FLAT PANEL|SOLAR|0%|0|0|0|WEATHER DEPENDENT|
+|PUMP STORAGE|WATER|10%|10|60 MINS|60 MINS|15% - 25%|
+|RUN OF RIVER|WATER|0%|0|0|0|N/A (MUST RUN)|
+|STEAM SUB-CRITICAL|BLACK COAL/BROWN COAL/NATURAL GAS (FOSSIL)|40%|420 (COLD)|720 MINS|720 MINS|1% - 2%|
+|STEAM SUPER CRITICAL|BLACK COAL|40%|420 (COLD)|720 MINS|720 MINS|1% - 3%|
+|WIND - ONSHORE|WIND|0%|0|0|0|WEATHER DEPENDENT|
+|AGGREGATED|AGGREGATED|0%|0|0|0|WEATHER DEPENDENT|
 
 
 
